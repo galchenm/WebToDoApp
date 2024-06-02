@@ -25,7 +25,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[todo]
-        st.experimental_rerun()
+        st.rerun()
 
 st.text_input(label="Enter a new to-do", placeholder="Add a new to-do", label_visibility="hidden", on_change=add_todo, key="new_todo")
 
